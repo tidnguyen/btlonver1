@@ -126,20 +126,22 @@ int main() {
 		bg = bg + dem;
 
 		if (nd >= sonbc) {											//Uu tien ndu lam banh chung truoc
-			bc = bc + nd/sonbc;
+//------------------------------------------------------------------------------------------------------------------------------------//
+								//Thieu dieu kien rang buoc so banh chung kh duoc level up//
+//------------------------------------------------------------------------------------------------------------------------------------//
+			bc = bc + nd/sonbc;//
 			nd = n - sonbc*bc;
-			//nd = nd;
 
 			if (nd >= sonbg) {
-				bg = bg + nd/sonbg; //sua phan banh giay vi banh chung chi co the chenh lech it nhat 1 banh
+				//bg = bg + 1; //sua phan banh giay vi banh chung chi co the chenh lech it nhat 1 banh
 				nd = n - sonbc*(bc) - sonbg*(bg);
 				//nd = ndu;   
-				printf("\nSo nep du: %f", nd);
+				printf("\nTH1: So nep du: %f", nd);
 				printf("\nSo banh chung: %d", bc);
 				printf("\nSo banh giay: %d", bg);
 			}
 			else {
-				printf("\nSo nep du: %f", nd);
+				printf("\nTH2: So nep du: %f", nd);
 				printf("\nSo banh chung: %d", bc);
 				printf("\nSo banh giay: %d", bg);
 			}
@@ -148,15 +150,14 @@ int main() {
 		else {														//Neu ndu kh du lam banh chung thi lam banh giay
 
 			if (nd >= sonbg) {
-				bg = bg + nd/sonbg;
+				bg = bg + 1;
 				nd = n - sonbc*(bc) - sonbg*(bg);
-				//nd = ndu;
-				printf("\nSo nep du: %f", nd);
+				printf("\nTH3: So nep du: %f", nd);
 				printf("\nSo banh chung: %d", bc);
 				printf("\nSo banh giay: %d", bg);			
 			}
 			else {
-				printf("\nSo nep du: %f", nd);
+				printf("\nTH4: So nep du: %f", nd);
 				printf("\nSo banh chung: %d", bc);
 				printf("\nSo banh giay: %d", bg);
 			}
